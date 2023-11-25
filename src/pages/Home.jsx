@@ -27,7 +27,7 @@ const Home = () => {
           </div>
 
           {movieList.slice(0, 10).map((item) => (
-            <CardList key={item.id} {...item} />
+            <CardList key={item.id} {...item} links="/movies"/>
           ))}
 
           <div className=" col-md-4 d-flex align-items-center">
@@ -42,7 +42,7 @@ const Home = () => {
           </div>
 
           {tvList.slice(0, 10).map((item) => (
-            <CardList key={item.id} {...item} />
+            <CardList key={item.id} {...item} links="/tv"/>
           ))}
 
           <div className=" col-md-4 d-flex align-items-center">
@@ -59,7 +59,7 @@ const Home = () => {
           </div>
 
           {peopleList.slice(0, 10).map((item) => (
-            <CardList key={item.id} {...item} />
+            <CardList key={item.id} {...item} links="/people"/>
           ))}
         </>
       )}

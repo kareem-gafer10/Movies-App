@@ -30,7 +30,7 @@ const Movies = () => {
 
 
           {dataList.map((item) => (
-            <CardList key={item.id} {...item} />
+            <CardList key={item.id} {...item} links="/movies" />
           ))}
 
 

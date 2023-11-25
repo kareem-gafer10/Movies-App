@@ -61,7 +61,7 @@ const Login = () => {
   });
 
   return (
-    <div className=" w-75 mx-auto mt-100">
+    <div className=" w-75 mx-auto login ">
       <h1>Login</h1>
       <form className=" mt-5" onSubmit={formik.handleSubmit}>
         <div className="form-group">

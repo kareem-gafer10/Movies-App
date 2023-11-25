@@ -14,6 +14,7 @@ const useFetch = (url) => {
         setLoading(false)
         setDataList(data.results);
     } catch (error) {
+      console.log(error);
       setLoading(false)
     }
   };

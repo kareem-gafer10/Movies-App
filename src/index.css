@@ -2,8 +2,8 @@
 
 body {
   font-family: "Roboto", sans-serif;
- background-color: #131722;
- color: #fff;
+  background-color: #131722;
+  color: #fff;
 }
 .mt-100 {
   margin-top: 100px;
@@ -37,9 +37,24 @@ a {
 .card-layer:hover .layer {
   opacity: 0.7;
 }
-.img-details{
+.img-details {
   height: 500px;
   object-fit: contain;
-  
+}
+@media (max-width: 576px) {
+  .card-layer {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
+@media (max-width: 768px) {
+  .login {
+    width: 90% !important;
+  }
 }
