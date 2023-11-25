@@ -14,7 +14,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import MoviesDetails from "./pages/MoviesDetails";
 import TvDetails from "./pages/TvDetails";
 import PeopleDetails from "./pages/PeopleDetails";
-import CardDetails from "./components/CardDetails";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -29,7 +28,6 @@ const App = () => {
         { path: "tv/:id", element: <ProtectedRoute><TvDetails /></ProtectedRoute>  },
         { path: "people", element:  <ProtectedRoute><People /></ProtectedRoute>  },
         { path: "people/:id", element:  <ProtectedRoute><PeopleDetails /></ProtectedRoute>  },
-        // { path: "/:id", element: <CardDetails /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
         { path: "*", element: <NotFound /> },
