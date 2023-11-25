@@ -33,18 +33,17 @@ const MoviesDetails = () => {
 <div className="col-md-7">
 
 <div className="mt-5 text-white">
-{details.original_title ? <h2 className='p-2'>{details?.original_title}</h2> 
-: <h2 className='p-2'>{details?.original_name}</h2>}
+ <h2 className='p-2'>{details?.original_title}</h2> 
+
 
 <p className='p-2'>{details.overview}</p>
 
   <div className=' mt-3 d-flex align-items-center'>
-  {details.vote_average && <>
+
     <span className='text-info p-2 fs-4 '> Rate :</span> 
     <LiaStarSolid className=" text-warning" size={30} />
     <span className='p-1 fs-5'>{details.vote_average}</span>
-  </> }
-   
+ 
     </div>
     
     <div className=' mt-3'>
