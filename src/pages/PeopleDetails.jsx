@@ -30,10 +30,10 @@ const PeopleDetails = () => {
    <div className="col-md-7">
    
    <div className="mt-5 text-white">
-   {details.original_title ? <h2 className='p-2'>{details?.original_title}</h2> 
-   : <h2 className='p-2'>{details?.original_name}</h2>}
+
+    <h2 className='p-2'>{details?.name}</h2>
    
-   <p className='p-2'>{details.overview}</p>
+   <p className='p-2'>{details.biography?.split(" ").slice(0, 50).join(" ")}</p>
    
      <div className=' mt-3 d-flex align-items-center'>
      {details.vote_average && <>
@@ -44,19 +44,16 @@ const PeopleDetails = () => {
       
        </div>
        
-       <div className=' mt-3'>
-       <span className='text-info p-2 fs-4'> Vote count :</span> 
-       <span className='p-1 fs-5'>{details.vote_count}</span>
-       </div>
+      
        
        <div className=' mt-3'>
-       <span className='text-info p-2 fs-4'> Popularity :</span> 
-       <span className='p-1 fs-5'>{details.revenue}{details.popularity}</span>
+       <span className='text-info p-2 fs-4'> Place of birth: </span> 
+       <span className='p-1 fs-5'>{details.place_of_birth}</span>
        </div>
       
        <div className=' mt-3'>
-       <span className='text-info p-2 fs-4'> Release Date :</span> 
-       <span className='p-1 fs-5'>{details.release_date} {details.last_air_date}</span>
+       <span className='text-info p-2 fs-4'> Known for:</span> 
+       <span className='p-1 fs-5'>{details.known_for_department}</span>
        </div>
    
        </div>

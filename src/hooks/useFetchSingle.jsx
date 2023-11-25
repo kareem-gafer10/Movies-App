@@ -14,7 +14,7 @@ const ApiKey = "c0a753282bdc2008ffe4d6e4e1d6462c";
     try {
         setLoading(true);
         const { data } = await baseInstance.get(`${url}/${id}?api_key=${ApiKey}`);
-
+          console.log(data);
         setDetails(data);
         setLoading(false);
 
