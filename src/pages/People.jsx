@@ -24,7 +24,7 @@ const People = () => {
             </div>
           </div>
 
-          {dataList.map((item) => (
+          {dataList?.map((item) => (
             <CardList key={item.id} {...item} links="/people"/>
           ))}
         </>

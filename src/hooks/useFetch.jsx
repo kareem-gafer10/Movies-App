@@ -3,7 +3,7 @@ import baseInstance from "../Networking/baseInstance";
 
 
 const useFetch = (url) => {
-  const [dataList, setDataList] = useState([]);
+  const [dataList, setDataList] = useState(null);
   const [loading, setLoading] = useState(false);
   const ApiKey = "c0a753282bdc2008ffe4d6e4e1d6462c";
  

@@ -16,7 +16,7 @@ const PeopleDetails = () => {
     <div className="col-md-5">
    
        <div>
-       <img className=" cursor-pointer img-details mx-auto w-100"src={`${imgUrl}${details.profile_path}`} alt={details.name} />
+       <img className=" cursor-pointer img-details mx-auto w-100"src={`${imgUrl}${details?.profile_path}`} alt={details.name} />
        </div>
    
    </div>

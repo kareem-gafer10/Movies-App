@@ -3,9 +3,8 @@ import Loading from "../components/Loading";
 import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-  let { loading } = useFetch();
 
-  const { dataList: movieList } = useFetch("trending/movie");
+  const { dataList: movieList, loading } = useFetch("trending/movie");
   const { dataList: tvList } = useFetch("trending/tv");
   const { dataList: peopleList } = useFetch("trending/person");
 
@@ -26,7 +25,7 @@ const Home = () => {
             </div>
           </div>
 
-          {movieList.slice(0, 10).map((item) => (
+          {movieList?.slice(0, 10).map((item) => (
             <CardList key={item.id} {...item} links="/movies"/>
           ))}
 
@@ -41,7 +40,7 @@ const Home = () => {
             </div>
           </div>
 
-          {tvList.slice(0, 10).map((item) => (
+          {tvList?.slice(0, 10).map((item) => (
             <CardList key={item.id} {...item} links="/tv"/>
           ))}
 
@@ -58,7 +57,7 @@ const Home = () => {
             </div>
           </div>
 
-          {peopleList.slice(0, 10).map((item) => (
+          {peopleList?.slice(0, 10).map((item) => (
             <CardList key={item.id} {...item} links="/people"/>
           ))}
         </>

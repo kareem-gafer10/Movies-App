@@ -20,8 +20,8 @@ const MoviesDetails = () => {
  <div className="col-md-5">
 
     <div >
-    {details.poster_path ? 
-<img className=" cursor-pointer img-details mx-auto w-100" src={`${imgUrl}${details.poster_path}`} alt={details.title} />
+    {details?.poster_path ? 
+<img className=" cursor-pointer img-details mx-auto w-100" src={`${imgUrl}${details?.poster_path}`} alt={details.title} />
 :  <img className=" cursor-pointer img-details"
  src={`${imgUrl}${details.profile_path}`}
   alt={details.name} />
