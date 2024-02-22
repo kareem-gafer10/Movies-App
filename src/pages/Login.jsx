@@ -11,7 +11,7 @@ import { AuthContext } from "../context/AuthContext";
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const {setUserData}=useContext(AuthContext)
+  const {saveUserData}=useContext(AuthContext)
 
 
 
@@ -26,7 +26,7 @@ const Login = () => {
         });
         setLoading(false);
         localStorage.setItem("userToken", data.token)
-        setUserData(data.token)
+        saveUserData()
         navigate("/");
         formik.resetForm();
       }
