@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout";
 // import Home from "./pages/Home";
@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import { Toaster } from "react-hot-toast";
 import AuthContextProvider from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Loading from "./components/Loading";
 
 
 
@@ -56,7 +57,10 @@ const App = () => {
     <>
       <Toaster />
       <AuthContextProvider>
+      <Suspense fallback={<Loading />}>
         <RouterProvider router={router} />
+      </Suspense>
+
       </AuthContextProvider>
     </>
   );
