@@ -1,9 +1,11 @@
 import useFetch from "../hooks/useFetch";
 import Loading from "../components/Loading";
 import CardList from "../components/CardList";
+import Pagination from "../components/Pagination";
 
 const People = () => {
-  let { dataList, loading } = useFetch("trending/person");
+  let { dataList, loading,pageCount,getPage } = useFetch("trending/person");
+
 
   return (
     <div className=" row">
@@ -11,24 +13,17 @@ const People = () => {
         <Loading />
       ) : (
         <>
-          <div className=" col-md-4 d-flex align-items-center">
-            <div>
-              <div className="border-line w-25 mb-3"></div>
-              <h2 className="text-white">
-                Trending people <br />
-                to watch Right 
-                now{" "}
-              </h2>
-              <p className="text-white">Trending people today</p>
-              <div className="border-line mt-3"></div>
-            </div>
-          </div>
+         
 
           {dataList?.map((item) => (
             <CardList key={item.id} {...item} links="/people"/>
           ))}
         </>
       )}
+
+      <Pagination pageCount={pageCount} getPage={getPage}/>
+
+
     </div>
   );
 };

@@ -58,3 +58,20 @@ a {
     width: 90% !important;
   }
 }
+
+
+
+.pagination {
+  --bs-pagination-bg: #1a2030 !important;
+  --bs-pagination-color: #fff !important;
+  --bs-pagination-active-bg: #0dcaf0 !important;
+  --bs-pagination-active-border-color: #0dcaf0 !important;
+  --bs-pagination-border-color: #0dcaf0 !important;
+  --bs-pagination-hover-color: #fff !important;
+  --bs-pagination-hover-bg: #0dcaf0 !important;
+  --bs-pagination-hover-border-color: #0dcaf0 !important;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
